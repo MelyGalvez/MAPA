@@ -1,6 +1,11 @@
 # MAPA
 Module d'Apprentissage du Piano Automatisé (MAPA)
 
+## Table of Contents
+1. Equipe de travail
+2. Description du projet
+3. Journal de bord
+
 # Journal de bord
 
 ## Première session 17 septembre 2024
