@@ -22,6 +22,7 @@ Schéma des étapes du projet
 </div>
 
 <div align="center">
+  Schéma des étapes du projet
   <img src="https://github.com/user-attachments/assets/c3d9098e-1550-47c4-95c5-e33217d4f7e7" alt="Schéma des étapes du projet" width="200"/>
 </div>
 
