@@ -24,10 +24,10 @@ Schéma des étapes du projet
 </div>
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/de302488-39e3-42fb-bcfc-21a35f90154a" alt="Diagramme focntionnel primitif" width="500"/>
+  <img src="https://github.com/user-attachments/assets/de302488-39e3-42fb-bcfc-21a35f90154a" alt="Diagramme fonctionnel primitif" width="500"/>
 </div>
 <div align="center">
-Diagramme focntionnel primitif
+Diagramme fonctionnel primitif
 </div>
 
 ## Deuxième session 24 septembre 2024
