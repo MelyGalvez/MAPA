@@ -23,5 +23,11 @@ Mise en place du projet MAPA. Brainstorming sur les différents point du sujet M
 Schéma des étapes du projet
 </div>
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/de302488-39e3-42fb-bcfc-21a35f90154a" alt="Diagramme focntionnel primitif" width="500"/>
+</div>
+<div align="center">
+Diagramme focntionnel primitif
+</div>
+
 ## Deuxième session 24 septembre 2024
-![Diagramme_fonctionnel_primitif](https://github.com/user-attachments/assets/de302488-39e3-42fb-bcfc-21a35f90154a)
