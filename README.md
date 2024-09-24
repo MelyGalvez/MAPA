@@ -7,5 +7,6 @@ Module d'Apprentissage du Piano Automatisé (MAPA)
 
 Mise en place du projet MAPA. Brainstorming sur les différents point du sujet MAPA. Conception du diagramme fonctionnel du projet.
 ![Schema_des_etapes_du_projet](https://github.com/user-attachments/assets/c3d9098e-1550-47c4-95c5-e33217d4f7e7)
+Schéma des étapes du projet
 
 ## Deuxième session 24 septembre 2024
