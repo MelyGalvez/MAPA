@@ -8,8 +8,10 @@ Module d'Apprentissage du Piano Automatisé (MAPA)
 
 # 1. Equipe de travail
 
-# 2. Description du projet
+Software: Mely & Marin
+Hardware: Justine & Jiajing
 
+# 2. Description du projet
 # 3. Journal de bord
 
 ## Première session 17 septembre 2024
@@ -31,6 +33,11 @@ Diagramme fonctionnel primitif
 </div>
 
 ## Deuxième session 24 septembre 2024
+Software: début de recherche de code pour traiter un fichier MIDI grâce à la STM32. Aussi recherche de code pour traiter un fichier audio (.wav)
 
+Hardware: recherche des références des composants
 ## Troisième session 01 octobre 2024
+Software: Avancement et réglage des erreurs du code de la semaine dernière
+
+Hardware: Listes des références fini pour commander. Emprunt d'une petite bande LED à Mme.Kittel pour tester un code
 
