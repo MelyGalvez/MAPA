@@ -31,3 +31,6 @@ Diagramme fonctionnel primitif
 </div>
 
 ## Deuxième session 24 septembre 2024
+
+## Troisième session 01 octobre 2024
+
