@@ -9,6 +9,7 @@ Module d'Apprentissage du Piano Automatisé (MAPA)
 # 1. Equipe de travail
 
 Software: Mely & Marin
+
 Hardware: Justine & Jiajing
 
 # 2. Description du projet
