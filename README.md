@@ -40,5 +40,12 @@ Hardware: recherche des références des composants
 ## Troisième session 01 octobre 2024
 Software: Avancement et réglage des erreurs du code de la semaine dernière
 
-Hardware: Listes des références fini pour commander. Emprunt d'une petite bande LED à Mme.Kittel pour tester un code
+Hardware: Listes des références presque fini pour commander. Emprunt d'une petite bande LED à Mme.Kittel pour tester un code
 
+## Quatrième session 8 octobre 2024
+
+Présentation de l'avancement du projet
+
+Software: Tuto en cours de compréhension, bibliothèque CMSIS installé. Code de control de Led avancé
+
+Hardware: phase final des listes de références, régulateur, ruban led. Classification des composants dans des excels différent selon les contructeur pour commander
