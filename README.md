@@ -49,3 +49,7 @@ Présentation de l'avancement du projet
 Software: Tuto en cours de compréhension, bibliothèque CMSIS installé. Code de control de Led avancé
 
 Hardware: phase final des listes de références, régulateur, ruban led. Classification des composants dans des excels différent selon les contructeur pour commander
+
+## Cinquième session 22 octobre 2024
+![image](https://github.com/user-attachments/assets/caae2b9b-f800-4daa-a783-dbfd19fdef90)
+
