@@ -53,3 +53,7 @@ Hardware: phase final des listes de références, régulateur, ruban led. Classi
 ## Cinquième session 22 octobre 2024
 ![image](https://github.com/user-attachments/assets/caae2b9b-f800-4daa-a783-dbfd19fdef90)
 
+## Sixième session 05 novembre 2024
+
+## Septième session 12 novembre 2024
+
