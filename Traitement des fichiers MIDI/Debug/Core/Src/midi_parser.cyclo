@@ -1,0 +1,2 @@
+../Core/Src/midi_parser.c:83:5:midi_note_to_led	3
+../Core/Src/midi_parser.c:91:6:process_midi	11

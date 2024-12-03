@@ -1,0 +1,3 @@
+../Core/Src/brillez.c:16:6:brillez_init	1
+../Core/Src/brillez.c:22:6:blink	3
+../Core/Src/brillez.c:40:6:light_up_led	2
