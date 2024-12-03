@@ -54,12 +54,19 @@ Hardware: phase final des listes de références, régulateur, ruban led. Classi
 ![image](https://github.com/user-attachments/assets/caae2b9b-f800-4daa-a783-dbfd19fdef90)
 
 ## Sixième session 05 novembre 2024
-
+Chez pas
 ## Septième session 12 novembre 2024
-Amazon
-## Huitième session 19 novembre 2024
-Amazon
-## Neuvième session 26 novembre 2024
-Amazon
-## Dixième session 03 décembre 2024
 
+Code pour l'initialisation du ruban led avec 3 boutons
+
+## Huitième session 19 novembre 2024
+
+Mesure des touches du piano pour connaitre le ruban led ou  matrice de led à prendre
+
+## Neuvième session 26 novembre 2024
+
+Décision finale pour le choix de ruban led 
+
+
+## Dixième session 03 décembre 2024
+Mise en forme
