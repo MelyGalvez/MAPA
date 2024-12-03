@@ -57,3 +57,9 @@ Hardware: phase final des listes de références, régulateur, ruban led. Classi
 
 ## Septième session 12 novembre 2024
 
+## Huitième session 19 novembre 2024
+
+## Neuvième session 26 novembre 2024
+
+## Dixième session 03 décembre 2024
+
