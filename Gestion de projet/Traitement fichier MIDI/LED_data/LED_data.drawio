@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.1">
+  <diagram name="Page-1" id="5VifisAQ40_3ZrM_E0Ym">
+    <mxGraphModel dx="934" dy="525" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a4GrzqRWb2ZUkxZBiZph-2" value="LED_DATA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="500" y="210" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a4GrzqRWb2ZUkxZBiZph-3" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="249.52" as="sourcePoint" />
+            <mxPoint x="806" y="249.79" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4GrzqRWb2ZUkxZBiZph-4" value="int ws2812b_send_buffer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];noLabel=0;allowArrows=1;backgroundOutline=1;labelBackgroundColor=none;" vertex="1" connectable="0" parent="a4GrzqRWb2ZUkxZBiZph-3">
+          <mxGeometry x="-0.4672" y="-4" relative="1" as="geometry">
+            <mxPoint x="25" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4GrzqRWb2ZUkxZBiZph-5" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="249.51999999999998" as="sourcePoint" />
+            <mxPoint x="194" y="249.51999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4GrzqRWb2ZUkxZBiZph-6" value="int ws2812b_set_led_hex" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="a4GrzqRWb2ZUkxZBiZph-5">
+          <mxGeometry x="-0.0535" y="3" relative="1" as="geometry">
+            <mxPoint x="-3" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4GrzqRWb2ZUkxZBiZph-7" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="250" as="sourcePoint" />
+            <mxPoint x="504" y="249.52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4GrzqRWb2ZUkxZBiZph-8" value="int ws2812b_set_led_rgb" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="a4GrzqRWb2ZUkxZBiZph-7">
+          <mxGeometry x="-0.0535" y="3" relative="1" as="geometry">
+            <mxPoint x="-3" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4GrzqRWb2ZUkxZBiZph-9" value="LED_RGB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="190" y="210" width="150" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
