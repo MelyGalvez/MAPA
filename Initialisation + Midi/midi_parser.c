@@ -254,11 +254,13 @@ ws2812b_send_buffer(&h_ws2812b);
 
 #include "ws2812b.h"
 #include "brillez.h"
+#include "init.h"
+
 #include "stm32l4xx_hal.h"
 #include "midi_parser.h"
 
-#define NUM_ETAGES 2  // Number of LED floors
-#define WS2812B_LED_NUMBER 144/2 * NUM_ETAGES  // Total number of LEDs
+#define NUM_ETAGES 4  // Number of LED floors
+#define WS2812B_LED_NUMBER 144  // Total number of LEDs
 
 #define LEDS_PER_ETAGE (WS2812B_LED_NUMBER / NUM_ETAGES) // LEDs per floor
 
@@ -401,7 +403,7 @@ void process_midi(uint16_t *midi_data, size_t length) {
             // 🟢 Move note downward through the floors
             for (int j = etage; j >= 0; j--) {
                 // Effect miroir : intervertir l'index entre les étages
-                int mirrored_index = ((j == etage) ? led_index : (LEDS_PER_ETAGE - 1 - led_index));
+                int mirrored_index = (((j == etage)||(j == 1)) ? led_index : (LEDS_PER_ETAGE - 1 - led_index));
 
                 int lower_led_index = serpentine_led_index((j * LEDS_PER_ETAGE) + mirrored_index);
 
@@ -417,7 +419,6 @@ void process_midi(uint16_t *midi_data, size_t length) {
         }
     }
 }
-
 
 
 
