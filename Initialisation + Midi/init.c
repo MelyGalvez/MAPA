@@ -89,6 +89,65 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 			  }
 		}*/
 
+	// Fonction pour fusionner deux sous-tableaux
+	void merge(volatile int32_t arr[], int left, int mid, int right) {
+	    int i, j, k;
+	    int n1 = mid - left + 1;
+	    int n2 = right - mid;
+
+	    // Créer des tableaux temporaires
+	    int L[n1], R[n2];
+
+	    // Copier les données dans les tableaux temporaires
+	    for (i = 0; i < n1; i++)
+	        L[i] = arr[left + i];
+	    for (j = 0; j < n2; j++)
+	        R[j] = arr[mid + 1 + j];
+
+	    // Fusionner les tableaux temporaires
+	    i = 0; // Index du premier sous-tableau
+	    j = 0; // Index du deuxième sous-tableau
+	    k = left; // Index du tableau fusionné
+
+	    while (i < n1 && j < n2) {
+	        if (L[i] <= R[j]) {
+	            arr[k] = L[i];
+	            i++;
+	        } else {
+	            arr[k] = R[j];
+	            j++;
+	        }
+	        k++;
+	    }
+
+	    // Copier les éléments restants de L[] si nécessaire
+	    while (i < n1) {
+	        arr[k] = L[i];
+	        i++;
+	        k++;
+	    }
+
+	    // Copier les éléments restants de R[] si nécessaire
+	    while (j < n2) {
+	        arr[k] = R[j];
+	        j++;
+	        k++;
+	    }
+	}
+
+	// Fonction principale de tri par fusion
+	void mergeSort(volatile int32_t arr[], int left, int right) {
+	    if (left < right) {
+	        int mid = left + (right - left) / 2;
+
+	        // Trier la première et la deuxième moitié
+	        mergeSort(arr, left, mid);
+	        mergeSort(arr, mid + 1, right);
+
+	        // Fusionner les deux moitiés
+	        merge(arr, left, mid, right);
+	    }
+	}
 
 
 void Test(){
@@ -126,16 +185,21 @@ void assignement(){
 		for (uint32_t i = 0; i < sauvegarde_index; i++) {
 		  ws2812b_set_led_hex(&h_ws2812b,compteur_sauvegarde[i], 0x00FF00);
 		}
+
 	if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET && compteur < 144) {
 
 			compteur++;  // Incrémentation
 
 
-		} else if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_RESET && compteur > 0) {
+		} else if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1) == GPIO_PIN_RESET && compteur > 0) {
 			compteur--;  // Décrémentation
+
+
 		} else if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9) == GPIO_PIN_RESET) {  // Bouton pressé(PA9)
 			supprimer_valeur(compteur);
-		} else if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1) == GPIO_PIN_RESET) {  // Sauvegarde du compteur
+
+
+		} else if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_RESET) {  // Sauvegarde du compteur
 			if (!valeur_existe_deja(compteur)) {  // Vérifie si la valeur est déjà sauvegardée
 				if (sauvegarde_index < 88) {
 					compteur_sauvegarde[sauvegarde_index] = compteur;
@@ -156,10 +220,14 @@ void assignement(){
 		}
 
 		if (sauvegarde_index == 8) {
+			LCD_Clear();
+			LCD_Print("Chargement...");
+			int n = sizeof(compteur_sauvegarde) / sizeof(compteur_sauvegarde[0]);
+			mergeSort(compteur_sauvegarde, 0, n - 1);
 				  for (uint32_t i = 0; i < sauvegarde_index; i++){
+
 					  light_up_led(compteur_sauvegarde[i], 0xFF0000, 100);
 				  }
-				  process_midi((uint16_t *) midi_data, midi_data_length);
 				  break;
 			  }
 	}
