@@ -14,10 +14,12 @@
 
 
 	volatile uint32_t compteur = 0;
-	volatile int32_t compteur_sauvegarde[88] = {0};
+	volatile int32_t compteur_sauvegarde[NB_Touche] = {0};
 	volatile uint32_t sauvegarde_index = 0;
 
 	#define DEBOUNCE_TIME 50  // Temps en ms (anti-rebond)
+	#define NB_Touche 12
+
 	volatile uint32_t last_interrupt_time = 0;
 
 	// Vérifie si la valeur existe déjà dans compteur_sauvegarde
@@ -186,20 +188,20 @@ void assignement(){
 		  ws2812b_set_led_hex(&h_ws2812b,compteur_sauvegarde[i], 0x00FF00);
 		}
 
-	if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET && compteur < 144) {
+	if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_3) == GPIO_PIN_RESET && compteur < 144) {
 
 			compteur++;  // Incrémentation
 
 
-		} else if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1) == GPIO_PIN_RESET && compteur > 0) {
+		} else if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_2) == GPIO_PIN_RESET && compteur > 0) {
 			compteur--;  // Décrémentation
 
 
-		} else if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9) == GPIO_PIN_RESET) {  // Bouton pressé(PA9)
+		} else if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_0) == GPIO_PIN_RESET) {  // Bouton pressé(PA9)
 			supprimer_valeur(compteur);
 
 
-		} else if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_RESET) {  // Sauvegarde du compteur
+		} else if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_4) == GPIO_PIN_RESET) {  // Sauvegarde du compteur
 			if (!valeur_existe_deja(compteur)) {  // Vérifie si la valeur est déjà sauvegardée
 				if (sauvegarde_index < 88) {
 					compteur_sauvegarde[sauvegarde_index] = compteur;
@@ -219,11 +221,14 @@ void assignement(){
 			}
 		}
 
-		if (sauvegarde_index == 8) {
+		if (sauvegarde_index == NB_Touche) {
 			LCD_Clear();
 			LCD_Print("Chargement...");
-			int n = sizeof(compteur_sauvegarde) / sizeof(compteur_sauvegarde[0]);
-			mergeSort(compteur_sauvegarde, 0, n - 1);
+			//int n = sizeof(compteur_sauvegarde) / sizeof(compteur_sauvegarde[0]);
+			//mergeSort(compteur_sauvegarde, 0, n - 1);
+			//for (int i=0;i<sizeof(compteur_sauvegarde);i++){
+			//	printf("%ld",compteur_sauvegarde[i]);}
+
 				  for (uint32_t i = 0; i < sauvegarde_index; i++){
 
 					  light_up_led(compteur_sauvegarde[i], 0xFF0000, 100);

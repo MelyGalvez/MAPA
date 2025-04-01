@@ -408,9 +408,9 @@ void process_midi(uint16_t *midi_data, size_t length) {
                 int lower_led_index = serpentine_led_index((j * LEDS_PER_ETAGE) + mirrored_index);
 
                 if (((status & 0xF0) == 0x90 || (status & 0xFF) == 0x91) && velocity > 0) {
-                    active_notes[lower_led_index] = 1;
+                    active_notes[lower_led_index] = 1;   // si la bonne longueur de ruban led mettre en argument: compteur_sauvegarde[lower_led_index]
                 } else if ((status & 0xF0) == 0x80 || velocity == 0) {
-                    active_notes[lower_led_index] = 0;
+                    active_notes[lower_led_index] = 0;   // si la bonne longueur de ruban led mettre en argument: compteur_sauvegarde[lower_led_index]
                 }
 
                 update_leds();

@@ -31,10 +31,10 @@ void Navigation() {
     LCD_DisplayMenu();
 
     while (1) {
-    	if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_RESET && menu_selected==1 && menu_index==0){
+    	if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_4) == GPIO_PIN_RESET && menu_selected==1 && menu_index==0){
 		  process_midi((uint16_t *) midi_data, midi_data_length);}
 
-        if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET) {  // Bouton de droite: Entrer
+        if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_3) == GPIO_PIN_RESET) {  // Bouton de droite: Entrer
         	 if (menu_selected<1){
         		 menu_selected++;
         	 }
@@ -53,7 +53,7 @@ void Navigation() {
             HAL_Delay(200);
         }
 
-        if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1) == GPIO_PIN_RESET && menu_selected==1) {  // Bouton de gauche: Retour
+        if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_2) == GPIO_PIN_RESET && menu_selected==1) {  // Bouton de gauche: Retour
             menu_selected--;
             sous_menu_index=0;
             LCD_Clear();
@@ -61,7 +61,7 @@ void Navigation() {
             HAL_Delay(500);
         }
 
-        if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9) == GPIO_PIN_RESET ) {  //Bonton du haut: Défilement Haut
+        if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_0) == GPIO_PIN_RESET ) {  //Bonton du haut: Défilement Haut
             if ( menu_selected==0){
             	if (menu_index > 0){
 					menu_index--;
@@ -78,7 +78,7 @@ void Navigation() {
 			}
           }
         }
-        if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10) == GPIO_PIN_RESET) { // Bonton du bas: Défilement Bas
+        if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_1) == GPIO_PIN_RESET) { // Bonton du bas: Défilement Bas
             if(menu_selected==0){
             	if (menu_index < sizeof(menu_principal) / sizeof(menu_principal[0]) - 2){
             	menu_index++;
